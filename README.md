@@ -26,7 +26,7 @@ You're going to need:
 
 ## Database Schema Employed:
 
-(assets/database-schema.png)
+<p align="center"><img src="./assets/database-schema.png" width=700 alt="Database Schema Employed"></p>
 
 ## List of Packages & Libraries Used:
 
