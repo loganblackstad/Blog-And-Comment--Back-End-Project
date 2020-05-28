@@ -1,16 +1,12 @@
-"use strict";
+'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Posts = sequelize.define(
-    "Posts",
-    {
-      post_id: DataTypes.STRING,
-      title: DataTypes.STRING,
-      author: DataTypes.STRING,
-    },
-    {}
-  );
-  Posts.associate = function (models) {
+  const Comments = sequelize.define('Comments', {
+    author: DataTypes.STRING,
+    date_posted: DataTypes.DATE,
+    post_id: DataTypes.INTEGER
+  }, {});
+  Comments.associate = function(models) {
     // associations can be defined here
   };
-  return Posts;
+  return Comments;
 };
