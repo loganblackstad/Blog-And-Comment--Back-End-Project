@@ -6,12 +6,10 @@ module.exports = (sequelize, DataTypes) => {
       title: DataTypes.STRING,
       author: DataTypes.STRING,
       remark: DataTypes.STRING,
-      post_id: DataTypes.STRING,
     },
     {}
   );
   Comments.associate = function (models) {
-    Comments.belongsTo(models.Users, { foreignKey: "author" });
     Comments.belongsTo(models.Posts, { foreignKey: "post_id" });
   };
   return Comments;

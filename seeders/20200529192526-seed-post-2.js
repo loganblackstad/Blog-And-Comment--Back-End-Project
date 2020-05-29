@@ -6,18 +6,21 @@ module.exports = {
       {
         title: "This is Easy!",
         author: "Princeton92",
+        user_id: 4,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         title: "Sequelize is Going to Kill Me!",
         author: "logan-yeah",
+        user_id: 3,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         title: "Let's Pump Up the Volume!",
         author: "kelsey-the-coder",
+        user_id: 5,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
