@@ -7,9 +7,9 @@
   </head>
   <body>
     <h1>Welcome to <%= title %></h1>
-    <h2>Welcome! <%= user.username %></h2>
+    <h2>Welcome! <%= user && user.username %></h2>
     <h2>Thanks for signing up on the <%= title %> web app.</h2>
-    <h2>Your email is <%= user.email %></h2>
+    <h2>Your email is <%= user && user.email %></h2>
     <p><a href="/">Home</a></p>
   </body>
 </html>

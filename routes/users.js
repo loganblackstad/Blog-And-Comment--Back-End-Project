@@ -27,8 +27,10 @@ router.post("/signup", (req, res) => {
       username,
       email,
       password: hash,
-    }).then((result) => {
-      res.redirect("/users/dashboard");
+    }).then((user) => {
+      delete user.password;
+      req.session.user = user;
+      res.redirect("/");
     });
   });
 });
