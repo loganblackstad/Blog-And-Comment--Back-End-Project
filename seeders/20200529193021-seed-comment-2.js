@@ -6,6 +6,7 @@ module.exports = {
       {
         author: "john_doe_3",
         remark: "This is the Shizz!",
+        post_id: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
         date_posted: new Date(),
@@ -13,6 +14,7 @@ module.exports = {
       {
         author: "kelsey-the-coder",
         remark: "Coding my socks Off!",
+        post_id: 2,
         createdAt: new Date(),
         updatedAt: new Date(),
         date_posted: new Date(),
@@ -20,6 +22,7 @@ module.exports = {
       {
         author: "john_doe_3",
         remark: "We're gonna Sequelize this B",
+        post_id: 3,
         createdAt: new Date(),
         updatedAt: new Date(),
         date_posted: new Date(),
