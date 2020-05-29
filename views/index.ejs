@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %></title>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl+
 '&gtm_auth=n_ddGY4Pls1PP3G7VG0_uw&gtm_preview=env-12&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MNM2T5X');</script>
-  <link href="https://static.paddle.com/assets/css/icons/icons.css" rel="stylesheet">
-  <link href="https://static.paddle.com/assets/css/vendor/landing.css" rel="stylesheet">
-</head>
-<body>
-  <h1>Welcome to <%= title %></h1>
-  <% if (user) { %>
-    <h2>Logged in User: <%= user.username %> </h2>
-  <% } else { %>  
-    <h2>You are logged out</h2>
-  <% } %>
-  <p><a href="/users/signup">User Registration</a></p>
-  <p><a href="/users/login">User Login</a></p>
-  <div class="wrapper">
-<section class="container">
-<header class="landing-header">
-<div class="landing-header__left">
-<img class="logo" src="https://static.paddle.com/assets/images/logo/logo-primary.svg" />
-</div>
-<div class="landing-header__right">
-<div class="pills">
-<a class="pui-pill" href="https://vendors.paddle.com/signup">Signup</a>
-<span class="pui-pill selected">Login</span>
-</div>
-</header>
+      <link href="https://static.paddle.com/assets/css/icons/icons.css" rel="stylesheet">
+      <link href="https://static.paddle.com/assets/css/vendor/landing.css" rel="stylesheet">
+    </head>
+    <body>
+      <h1>Welcome to <%= title %></h1>
+        <% if (user) { %>
+      <h2>Logged in User: <%= user.username %> </h2>
+        <% } else { %>
+      <h2>You are logged out</h2>
+        <% } %>
+    <p><a href="/users/signup">User Registration</a></p>
+    <p><a href="/users/login">User Login</a></p>
+    <div class="wrapper">
+      <section class="container">
+        <header class="landing-header">
+          <div class="landing-header__left">
+            <img class="logo" src="/assets/blog-icon.jpg" />
+          </div>
+          <div class="landing-header__right">
+            <div class="pills">
+              <a class="pui-pill" href="https://vendors.paddle.com/signup">Signup</a>
+              <span class="pui-pill selected">Login</span>
+            </div>
+          </header>
 
-<form class="pui-form" method="post" action="https://vendors.paddle.com/login">
-<input type="hidden" name="_token" value="UgYZGyFvbSTVEgyjHNUbnvSGQy9sCx5IR6az0Ul6" />
-<div class="pui-form__element">
-<input class="pui-form__input pui-form__input--large" placeholder="Email Address" type="email" name="email" required />
-</div>
-<div class="pui-form__element">
-<input class="pui-form__input pui-form__input--large" placeholder="Password" type="password" name="password" required />
-</div>
-<div class="pui-form__element">
-<button class="pui-btn-primary pui-btn-primary--big is-block success" type="submit">Login &raquo;</button>
-</div>
-<p class="pui-form__description password-reset" style="margin-top: 16px;">Forgot your password? <a href="https://vendors.paddle.com/password/reset">Reset it</a>.</p>
-</form>
-</section>
+          <form class="pui-form" method="post" action="https://vendors.paddle.com/login">
+            <input type="hidden" name="_token" value="UgYZGyFvbSTVEgyjHNUbnvSGQy9sCx5IR6az0Ul6" />
+            <div class="pui-form__element">
+              <input class="pui-form__input pui-form__input--large" placeholder="Email Address" type="email"
+                name="email"
+                required />
+            </div>
+            <div class="pui-form__element">
+              <input class="pui-form__input pui-form__input--large" placeholder="Password" type="password"
+                name="password"
+                required />
+            </div>
+            <div class="pui-form__element">
+              <button class="pui-btn-primary pui-btn-primary--big is-block success" type="submit">Login
+                &raquo;</button>
+            </div>
+            <p class="pui-form__description password-reset" style="margin-top: 16px;">Forgot your password?
+              <a
+                href="https://vendors.paddle.com/password/reset">Reset it</a>.</p>
+          </form>
+        </section>
 
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4105085.js"></script>
+        <script type="text/javascript" id="hs-script-loader" async defer
+          src="//js.hs-scripts.com/4105085.js"></script>
 
-</div>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"2cc7798054","applicationID":"213756564","transactionName":"NVEDMBMCWxBRVEYNCwwbIAcVCloNH0FXCgANRj4IDgRcDW9HUwMB","queueTime":0,"applicationTime":34,"atts":"GRYARlsYSB4=","errorBeacon":"bam.nr-data.net","agent":""}</script>
-</body>
-</html>
+      </div>
+      <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"2cc7798054","applicationID":"213756564","transactionName":"NVEDMBMCWxBRVEYNCwwbIAcVCloNH0FXCgANRj4IDgRcDW9HUwMB","queueTime":0,"applicationTime":34,"atts":"GRYARlsYSB4=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+    </body>
+  </html>
