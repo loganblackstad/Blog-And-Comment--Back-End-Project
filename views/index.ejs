@@ -8,12 +8,39 @@
       <link href="https://static.paddle.com/assets/css/vendor/landing.css" rel="stylesheet">
     </head>
     <body>
-      <h1>Welcome to <%= title %></h1>
-        <% if (user) { %>
-      <h2>Logged in User: <%= user.username %> </h2>
+    <div class="nav d-flex flex-row">
+            <div class="logo">
+                <a href="/">Blog</a>
+            </div>
+            <div class="nav-desktop d-flex flex-row">
+                <a href="/users/createpost" class="create_post_button nav-button">Create Post</a>
+                <a href="/users/signup" class="signup_button nav-button"><% if (user) { %>
+      User: <%= user.username %>
         <% } else { %>
-      <h2>You are logged out</h2>
-        <% } %>
+      Sign Up / Login
+        <% } %></a>
+            </div>
+            <div class="nav-mobile-icon">
+                <a href="#" data-mobile-nav><i class="fa fa-bars" aria-hidden="true" style="color: rgba(0,162,255,0.8);
+                        font-size: 36px;"></i></a>
+                <div class="dropdown-menu" style="display: none">
+                    <ul>
+                        <li>
+                            <a href="/users/createpost">Create Post</a>
+                        </li>
+                        <li>
+                            <a href="/users/signup"><% if (user) { %>
+                          User: <%= user.username %>
+                          <% } else { %>
+                        Sign Up / Login
+                          <% } %></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      <!-- <h1>Welcome to </h1> -->
+        
     <!-- <p><a href="/users/signup">User Registration</a></p>
     <p><a href="/users/login">User Login</a></p> -->
     <div class="wrapper">
@@ -31,7 +58,7 @@
 
           <form class="pui-form" method="post" action="/users/login">
             <div class="pui-form__element">
-              <input class="pui-form__input pui-form__input--large" placeholder="Email Address" type="email"
+              <input class="pui-form__input pui-form__input--large" placeholder="Username (or Email)" type="email"
                 name="email"
                 required />
             </div>
