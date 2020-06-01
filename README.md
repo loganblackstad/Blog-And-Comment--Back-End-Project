@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="./assets/placeholder-readme-logo.png" alt="Blog & Comment: An Effective Way to Share" width="226">
+  <img src="./public/assets/placeholder-readme-logo.png" alt="Blog & Comment: An Effective Way to Share" width="226">
   <br>
 
 <p align="center">Blog & Create helps you create beautiful and secure blog content.</p>
 
-<p align="center"><img src="./assets/placeholder-front-image.png" width=700 alt="Screenshot of Blog & Comment"></p>
+<p align="center"><img src="./public/assets/placeholder-front-image.png" width=700 alt="Screenshot of Blog & Comment"></p>
 
 <p align="center"><em>The example above was created with Bootstrap. Check it out at <a href="https://loganblackstad.github.io/group-back-end-project">loganblackstad.github.io/group-back-end-project</a>.</em></p>
 
@@ -26,7 +26,7 @@ You're going to need:
 
 ## Database Schema Employed:
 
-<p align="center"><img src="./assets/database-schema.png" width=700 alt="Database Schema Employed"></p>
+<p align="center"><img src="./public/assets/database-schema.png" width=700 alt="Database Schema Employed"></p>
 
 ## List of Packages & Libraries Used:
 
