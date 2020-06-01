@@ -55,4 +55,21 @@ router.post("/login", (req, res) => {
     });
 });
 
+ 
+
+router.post("/createpost", (req, res, next)=> {
+  const values = { title:req.body.title,
+  author:req.body.author,
+  body_content:req.body.body_content};
+
+db.Posts.create(values)
+.then(function(user){ 
+  // res.redirect("/users/dashboard");
+  res.json(user);
+});
+});
+
+
+
+
 module.exports = router;
