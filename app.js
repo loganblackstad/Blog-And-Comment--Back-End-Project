@@ -13,6 +13,7 @@ const bodyParser = require("body-parser");
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
+const postRouter = require("./routes/post");
 // const signupRouter = require("./routes/signup");
 
 // end of route creation -->
@@ -47,6 +48,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/post", postRouter);
 
 const db = require("./models");
 
