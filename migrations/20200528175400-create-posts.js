@@ -17,6 +17,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
+      body_content: {
+        type: Sequelize.STRING,
+      },
       date_posted: {
         type: Sequelize.DATE,
       },
