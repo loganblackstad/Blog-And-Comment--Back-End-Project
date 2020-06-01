@@ -26,6 +26,9 @@ module.exports = {
       last_login: {
         type: Sequelize.DATE,
       },
+      newsletter: {
+        type: Sequelize.BOOLEAN,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
