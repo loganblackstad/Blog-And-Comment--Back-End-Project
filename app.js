@@ -5,6 +5,8 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
+const pgPromise = require("pg-promise");
+const methodOverride = require("method-override");
 
 // <--
 // CREATING ROUTES:
@@ -13,6 +15,7 @@ const bodyParser = require("body-parser");
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
+const postRouter = require("./routes/post");
 // const signupRouter = require("./routes/signup");
 
 // end of route creation -->
@@ -20,6 +23,7 @@ const usersRouter = require("./routes/users");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(methodOverride('_method'));
 app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -47,6 +51,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/post", postRouter);
 
 const db = require("./models");
 
