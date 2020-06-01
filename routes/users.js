@@ -55,4 +55,16 @@ router.post("/login", (req, res) => {
     });
 });
 
+router.post("/createpost", (req, res, next)=> {
+  const values = [ req.body.title,
+  req.body.author,
+  req.body.content];
+
+db.user.create({ { values } }
+})
+.then(function(user){ 
+  console.log(user);
+  
+});
+});
 module.exports = router;
