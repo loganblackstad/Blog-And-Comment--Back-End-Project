@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Create a Post</title>
+    <title>Create Post</title>
     <script>
     tinymce.init({
     selector: 'textarea#editor',
@@ -25,10 +25,83 @@
   </head>
   <body>
   
+
+<!-- Navbar -->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+        <div class="container">
+
+          <!-- Brand -->
+          <a class="navbar-brand waves-effect" href="/">
+            <strong class="font-weight-bold dark-grey-text">Blog</strong>
+          </a>
+
+          <!-- Collapse -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Links -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!-- Left -->
+            <ul class="navbar-nav mr-auto">
+            <!-- Right -->
+             
+              <li class="nav-item mr-2">
+                <a href="/users/createpost" class="nav-link border border-light rounded waves-effect"
+                  target="_blank">
+                  <i class="fab fa-github mr-2"></i>Create Post
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/users/signup" class="nav-link border border-light rounded waves-effect"
+                  target="_blank">
+                  <i class="fas fa-download fa-sm mr-2"></i><% if (user) { %>
+                    User: <%= user.username %>
+                      <% } else { %>
+                    Sign Up / Login
+                      <% } %>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+      </nav>
+      <!-- Navbar -->
+
+<!-- 
+<div class="nav d-flex flex-row">
+            <div class="logo">
+                <a href="/">Blog</a>
+            </div>
+            <div class="nav-desktop d-flex flex-row">
+                <a href="/users/createpost" class="create_post_button nav-button">Create Post</a>
+                <a href="/users/signup" class="signup_button nav-button"><% if (user) { %>
+   
+            </div>
+            <div class="nav-mobile-icon">
+                <a href="#" data-mobile-nav><i class="fa fa-bars" aria-hidden="true" style="color: rgba(0,162,255,0.8);
+                        font-size: 36px;"></i></a>
+                <div class="dropdown-menu" style="display: none">
+                    <ul>
+                        <li>
+                            <a href="/users/createpost">Create Post</a>
+                        </li>
+                        <li>
+                     
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+
+
     <div class="container mt-4 mb-4">
       <div class="row justify-content-md-center">
         <div class="col-md-12 col-lg-8">
-          <h1 class="h2 mb-4">Submit Blog Post</h1>
+          <h1 class="h2 mb-4">Create Post</h1>
           <label></label>
           <div class="form-group">
             <textarea id="editor"></textarea>
