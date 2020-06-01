@@ -69,7 +69,33 @@ db.Posts.create(values)
 });
 });
 
+//updates blog post
+// router.put("/createpost/:id", (req, res, next)=> {
+//   let values = { title:req.body.title,
+//   author:req.body.author,
+//   body_content:req.body.body_content};
 
+// db.Posts.update(values)
+// .then(function(user){
+// res.redirect("/users/dashboard");
+// });
+// });
+
+
+//deletes post
+router.delete("/createpost/:post_id", (req, res, next)=> {
+  const post_id = req.body.post_id;
+
+  db.Posts.destroy({ where: { post_id: $1} })
+  .then(rowsDeleted => {
+    if (rowsDeleted === 1) {
+      console.log('Deleted successfully');
+    }
+  })
+  .catch(err => {
+    console.log(err);
+  });
+});
 
 
 module.exports = router;

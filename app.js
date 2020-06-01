@@ -5,6 +5,8 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
+const pgPromise = require("pg-promise");
+const methodOverride = require("method-override");
 
 // <--
 // CREATING ROUTES:
@@ -20,6 +22,7 @@ const usersRouter = require("./routes/users");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(methodOverride('_method'));
 app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
