@@ -30,7 +30,7 @@ router.post("/signup", (req, res) => {
     }).then((user) => {
       delete user.password;
       req.session.user = user;
-      res.redirect("/");
+      res.redirect("/users/dashboard");
     });
   });
 });
@@ -44,7 +44,7 @@ router.post("/login", (req, res) => {
         if (match) {
           // res.send('Logged in!');
           req.session.user = Users;
-          res.redirect("/");
+          res.redirect("/users/dashboard");
         } else {
           res.send("Incorrect Password");
         }
