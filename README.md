@@ -6,7 +6,7 @@
 
 <p align="center"><img src="./public/assets/placeholder-front-image.png" width=700 alt="Screenshot of Blog & Comment"></p>
 
-<p align="center"><em>The example above was created with Bootstrap. Check it out at <a href="https://loganblackstad.github.io/group-back-end-project">loganblackstad.github.io/group-back-end-project</a>.</em></p>
+<p align="center"><em>The example above was created with Bootstrap. Check it out at <a href="https://group-back-end-project.herokuapp.com/">https://group-back-end-project.herokuapp.com/</a>.</em></p>
 
 ## Features
 
