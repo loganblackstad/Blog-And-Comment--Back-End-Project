@@ -17,6 +17,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
+      content: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
       date_posted: {
         type: Sequelize.DATE,
       },
