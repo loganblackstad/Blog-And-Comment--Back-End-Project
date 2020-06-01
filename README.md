@@ -6,7 +6,7 @@
 
 <p align="center"><img src="./assets/placeholder-front-image.png" width=700 alt="Screenshot of Blog & Comment"></p>
 
-<p align="center"><em>The example above was created with Bootstrap. Check it out at <a href="https://loganblackstad.github.io/group-back-end-project">loganblackstad.github.io/group-back-end-project</a>.</em></p>
+<p align="center"><em>The example above was created with Bootstrap. Check it out at <a href="https://group-back-end-project.herokuapp.com/">https://group-back-end-project.herokuapp.com/</a>.</em></p>
 
 ## Features
 
@@ -26,7 +26,7 @@ You're going to need:
 
 ## Database Schema Employed:
 
-<p align="center"><img src="./assets/database-schema.png" width=700 alt="Database Schema Employed"></p>
+<p align="center"><img src="./public/assets/database-schema.png" width=700 alt="Database Schema Employed"></p>
 
 ## List of Packages & Libraries Used:
 
