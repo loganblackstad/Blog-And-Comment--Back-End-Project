@@ -52,6 +52,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/post", postRouter);
+app.get("/test", (req,res)=>{
+  res.render("ckeditor-test.ejs");
+});
 
 const db = require("./models");
 
