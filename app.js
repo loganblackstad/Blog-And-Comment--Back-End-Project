@@ -16,6 +16,7 @@ const methodOverride = require("method-override");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const postRouter = require("./routes/post");
+const commentRouter = require("./routes/comments");
 // const signupRouter = require("./routes/signup");
 
 // end of route creation -->
@@ -52,6 +53,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/post", postRouter);
+app.use("/comments", commentRouter);
 // API request to test the functionality of the ckeditor ejs file
 app.get("/test", (req,res)=>{
   res.render("ckeditor-test.ejs");
