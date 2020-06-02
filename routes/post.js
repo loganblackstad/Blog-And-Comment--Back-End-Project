@@ -21,8 +21,8 @@ router.post("/dashboard", (req, res) => {
     const { title, content, author } = req.body;
     
     db.Posts.Create()
-    .then((Posts) =>{
-    res.redirect("/users/dashboard", 
+    .then((Posts) => {
+    res.redirect("/users/dashboard") 
     });
 });
 

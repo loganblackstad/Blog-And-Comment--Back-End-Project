@@ -52,7 +52,12 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/post", postRouter);
+// API request to test the functionality of the ckeditor ejs file
+app.get("/test", (req,res)=>{
+  res.render("ckeditor-test.ejs");
+});
 
+// Require the sequelize models 
 const db = require("./models");
 
 // routes
