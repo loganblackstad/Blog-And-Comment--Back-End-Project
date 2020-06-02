@@ -1,28 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-    </head>
+<%- include('partials/page-start.ejs') %>
 
-    <body>
-      <h1>Welcome to <%= title %></h1>
-        <h2>Welcome! <%= user && user.username %></h2>
-          <h2>Thanks for signing up on the <%= title %> web app.</h2>
-            <h2>Your email is <%= user && user.email %></h2>
+  <h1>Welcome to <%= title %></h1>
+    <h2>Welcome! <%= user && user.username %></h2>
+      <h2>Thanks for signing up on the <%= title %> web app.</h2>
+        <h2>Your email is <%= user && user.email %></h2>
 
-              <% Posts.forEach(post=> {%>
 
-                <div>
-                  <h1><%= post.title %></h1>
-                    <h2><%= post.author %></h2>
-                      <p><%= post.content %></p>
-                      </div>
-                      <% })%>
 
-                        <p><a href="/">Home</a></p>
-                      </body>
+          <p><a href="/">Home</a></p>
 
-                    </html>
+          <%- include('partials/page-end.ejs') %>
