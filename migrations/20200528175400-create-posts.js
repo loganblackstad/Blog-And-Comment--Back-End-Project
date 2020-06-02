@@ -19,7 +19,6 @@ module.exports = {
       },
 
       body_content: {
-      master
         type: Sequelize.STRING,
       },
       date_posted: {

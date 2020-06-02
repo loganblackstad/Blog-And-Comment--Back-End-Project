@@ -17,13 +17,13 @@ router.get("/dashboard", function (req, res, next) {
 
 
 // for new post
-router.post("/dashboard", (req, res) => {
-    const { title, content, author } = req.body;
+// router.post("/dashboard", (req, res) => {
+//     const { title, content, author } = req.body;
     
-    db.Posts.Create()
-    .then((Posts) => {
-    res.redirect("/users/dashboard") 
-    });
-});
+//     db.Posts.Create()
+//     .then((Posts) => {
+//     res.redirect("/users/dashboard") 
+//     });
+// });
 
 module.exports= router;
