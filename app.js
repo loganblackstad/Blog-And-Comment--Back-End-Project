@@ -58,6 +58,9 @@ app.use("/comments", commentRouter);
 app.get("/test", (req, res) => {
   res.render("ckeditor-test.ejs");
 });
+app.get("/createpost", (req, res) => {
+  res.render("createpost2.ejs", { title: "Create Post" });
+}); 
 app.get("/cannot-reset-password", (req, res) => {
   res.render("cannot-reset-password.ejs");
 });

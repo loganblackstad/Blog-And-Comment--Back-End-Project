@@ -1,0 +1,19 @@
+
+<%- include('partials/page-start.ejs') %>
+
+    <!-- SECTION START - Wizywid Editor -->
+    <section class="ckeditor-section">
+        <form>
+            <textarea name="editor1" id="editor1" rows="10" cols="80">
+                Create some post content here.
+            </textarea>
+            <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'editor1' );
+            </script>
+        </form>
+    </section>
+    <!-- SECTION END - Wizywid Editor -->
+
+<%- include('partials/page-end.ejs') %>
