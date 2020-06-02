@@ -46,6 +46,7 @@ router.post("/login", (req, res) => {
         if (match) {
           // res.send('Logged in!');
           req.session.user = Users;
+          console.log(req.session.user.id);
           res.redirect("/users/dashboard");
         } else {
           res.send("Incorrect Password");
@@ -57,18 +58,29 @@ router.post("/login", (req, res) => {
     });
 });
 
-router.post("/createpost2", (req, res, next) => {
-  const values = {
-    title: req.body.title,
-    author: req.body.author,
-    body_content: req.body.body_content,
-  };
-
-  db.Posts.create(values).then(function (user) {
-    res.redirect("/users/dashboard");
-    // res.json(user);
+router.get("/createpost2", function (req, res, next) {
+  res.render("createpost2.ejs", {
+    user: req.session.user.username.replace(/['"]+/g, "") || null,
   });
 });
+
+router.post("/createpost2", (req, res, next) => {
+  console.log(req.body);
+  const values = {
+    title: req.body.title,
+    author: req.body.username,
+    body_content: req.body.body_content,
+  };
+  db.Users.findByPk(req.session.user.id)
+    .then((user) => {
+      user.createPost(values);
+    })
+    .then(res.redirect("/users/dashboard"));
+  // db.Posts.create(values).then(function (user) {
+  // res.redirect("/users/dashboard");
+  // res.json(user);
+});
+// });
 
 // updates blog post
 router.put("/createpost2/:id", (req, res, next) => {
