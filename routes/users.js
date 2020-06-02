@@ -5,11 +5,11 @@ const bcrypt = require("bcrypt");
 
 // GET users listening
 router.get("/signup", function (req, res, next) {
-  res.render("signup.ejs");
+  res.render("signup.ejs", { title: "Sign Up" });
 });
 
 router.get("/login", function (req, res, next) {
-  res.render("login.ejs");
+  res.render("login.ejs", { title: "Login" });
 });
 
 router.get("/dashboard", function (req, res, next) {
