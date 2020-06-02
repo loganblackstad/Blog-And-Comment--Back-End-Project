@@ -13,10 +13,13 @@ router.get("/login", function (req, res, next) {
 });
 
 router.get("/dashboard", function (req, res, next) {
-  res.render("dashboard.ejs", {
-    title: "Blog Repository",
-    user: req.session.user || null,
-    email: req.session.user || null,
+  db.Posts.findAll().then(function (Posts) {
+    res.render("dashboard.ejs", {
+      title: "Blog Repository",
+      user: req.session.user || null,
+      email: req.session.user || null,
+      Posts: Posts,
+    });
   });
 });
 
@@ -37,7 +40,6 @@ router.post("/signup", (req, res) => {
 
 router.post("/login", (req, res) => {
   const { username, password } = req.body;
-
   db.Users.findOne({ where: { username } })
     .then((Users) => {
       bcrypt.compare(password, Users.password, (err, match) => {

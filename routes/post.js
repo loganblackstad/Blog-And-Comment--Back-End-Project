@@ -15,12 +15,14 @@ router.get("/dashboard", function (req, res, next) {
 });
 
 router.get("/:id", function (req, res, next) {
-  db.Posts.findOne(req.params.id).then((Post) => {
+  console.log(req.session);
+  db.Posts.findByPk(req.params.id).then((Post) => {
     res.render("post-template.ejs"),
       {
         title: Post.title,
         author: Post.author,
         content: Post.body_content,
+        user: req.session.user || null,
       };
   });
 });
