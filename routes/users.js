@@ -57,7 +57,7 @@ router.post("/login", (req, res) => {
 
 
 
-router.post("/createpost", (req, res, next) => {
+router.post("/createpost2", (req, res, next) => {
   const values = {
     title: req.body.title,
     author: req.body.author,
@@ -72,7 +72,7 @@ router.post("/createpost", (req, res, next) => {
 });
 
 // updates blog post
-router.put("/createpost/:id", (req, res, next) => {
+router.put("/createpost2/:id", (req, res, next) => {
   db.Posts.findByPk(parseInt(req.params.id))
     .then(function (post) {
       post.title = req.body.title;
@@ -88,7 +88,7 @@ router.put("/createpost/:id", (req, res, next) => {
 
 
 //deletes post
-router.delete("/createpost/:post_id", (req, res, next) => {
+router.delete("/createpost2/:post_id", (req, res, next) => {
   const post_id = req.params.post_id;
 
   db.Posts.destroy({ where: { id: parseInt(post_id) } })
