@@ -1,0 +1,23 @@
+#profile-photo {
+  display: block;
+  border-radius: 2px;
+  border: 1px solid rgb(240, 240, 240);
+  float: left;
+  margin-top: -50px;
+}
+
+@media screen and (max-width: 992px) {
+  .img-fluid {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+  }
+  .profile-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    max-width: 230px;
+  }
+}

@@ -24,7 +24,7 @@ const commentRouter = require("./routes/comments");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(methodOverride('_method'));
+app.use(methodOverride("_method"));
 app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -55,11 +55,17 @@ app.use("/users", usersRouter);
 app.use("/post", postRouter);
 app.use("/comments", commentRouter);
 // API request to test the functionality of the ckeditor ejs file
-app.get("/test", (req,res)=>{
+app.get("/test", (req, res) => {
   res.render("ckeditor-test.ejs");
 });
+app.get("/createpost", (req, res) => {
+  res.render("createpost2.ejs", { title: "Create Post" });
+}); 
+app.get("/cannot-reset-password", (req, res) => {
+  res.render("cannot-reset-password.ejs");
+});
 
-// Require the sequelize models 
+// Require the sequelize models
 const db = require("./models");
 
 // routes
