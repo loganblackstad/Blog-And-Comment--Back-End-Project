@@ -58,7 +58,7 @@ app.use("/comments", commentRouter);
 app.get("/test", (req, res) => {
   res.render("ckeditor-test.ejs");
 });
-app.get("/createpost", (req, res) => {
+app.get("/createpost2", (req, res) => {
   res.render("createpost2.ejs", { title: "Create Post" });
 });
 
