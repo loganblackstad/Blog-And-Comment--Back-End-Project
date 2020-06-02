@@ -10,6 +10,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
         date_posted: new Date(),
+        user_id: 4
       },
       {
         author: "kelsey-the-coder",
@@ -18,6 +19,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
         date_posted: new Date(),
+        user_id: 5
       },
       {
         author: "john_doe_3",
@@ -26,6 +28,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
         date_posted: new Date(),
+        user_id: 4
       },
     ]);
   },
