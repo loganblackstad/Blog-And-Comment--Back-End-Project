@@ -13,6 +13,15 @@ module.exports = {
         user_id: 4,
       },
       {
+        author: "logan-yeah",
+        remark: "Seed Remark 1.5 - This is not the Shizz!",
+        post_id: 1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        date_posted: new Date(),
+        user_id: 3,
+      },
+      {
         author: "kelsey-the-coder",
         remark: "Seed Remark 2 - Coding my socks Off!",
         post_id: 2,
