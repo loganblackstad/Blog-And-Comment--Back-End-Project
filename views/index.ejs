@@ -4,89 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
-      <link href="https://static.paddle.com/assets/css/icons/icons.css" rel="stylesheet">
-      <link href="https://static.paddle.com/assets/css/vendor/landing.css" rel="stylesheet">
+      <!-- <link href="https://static.paddle.com/assets/css/icons/icons.css" rel="stylesheet">
+      <link href="https://static.paddle.com/assets/css/vendor/landing.css" rel="stylesheet"> -->
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Material Design Bootstrap -->
+      <link href="css/mdb.min.css" rel="stylesheet">
+      <!-- Your custom styles (optional) -->
+      <link href="css/style.min.css" rel="stylesheet">
     </head>
     <body>
 
-    <!-- SECTION START - Nav -->
-    <section>
-    <div class="nav d-flex flex-row">
-            <div class="logo">
-                <a href="/">Blog</a>
-            </div>
-            <div class="nav-desktop d-flex flex-row">
-                <a href="/users/createpost" class="create_post_button nav-button">Create Post</a>
-                <a href="/users/signup" class="signup_button nav-button"><% if (user) { %>
-      User: <%= user.username %>
-        <% } else { %>
-      Sign Up / Login
-        <% } %></a>
-            </div>
-            <div class="nav-mobile-icon">
-                <a href="#" data-mobile-nav><i class="fa fa-bars" aria-hidden="true" style="color: rgba(0,162,255,0.8);
-                        font-size: 36px;"></i></a>
-                <div class="dropdown-menu" style="display: none">
-                    <ul>
-                        <li>
-                            <a href="/users/createpost">Create Post</a>
-                        </li>
-                        <li>
-                            <a href="/users/signup"><% if (user) { %>
-                          User: <%= user.username %>
-                          <% } else { %>
-                        Sign Up / Login
-                          <% } %></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- SECTION END - Nav -->
-        
-    <!-- SECTION START - Placeholder Login hrefs -->
-    <!-- <p><a href="/users/signup">User Registration</a></p>
+      <%- include('partials/page-nav.ejs') %>
+
+
+
+        <!-- SECTION START - Placeholder Login hrefs -->
+        <!-- <p><a href="/users/signup">User Registration</a></p>
     <p><a href="/users/login">User Login</a></p> -->
-    <!-- SECTION START - Placeholder Login hrefs  -->
+        <!-- SECTION START - Placeholder Login hrefs  -->
 
-  <!-- SECTION START - Login Box -->
-    <div class="wrapper">
-      <section class="container">
-        <header class="landing-header">
-          <div class="landing-header__left">
-            <img class="logo" src="/assets/blog-icon.jpg" />
+        <!-- SECTION START - Login Box -->
+        <div class="wrapper">
+          <section class="container">
+            <header class="landing-header">
+              <div class="landing-header__left">
+                <img class="logo" src="/assets/blog-icon.jpg" />
+              </div>
+              <div class="landing-header__right">
+                <div class="pills">
+                  <a class="pui-pill" href="/users/signup">Signup</a>
+                  <span class="pui-pill selected">Login</span>
+                </div>
+              </header>
+              <form class="pui-form" method="post" action="/users/login">
+                <div class="pui-form__element">
+                  <input class="pui-form__input pui-form__input--large" placeholder="Username (or
+                    Email)" type="email"
+                    name="email"
+                    required />
+                </div>
+                <div class="pui-form__element">
+                  <input class="pui-form__input pui-form__input--large" placeholder="Password"
+                    type="password"
+                    name="password"
+                    required />
+                </div>
+                <div class="pui-form__element">
+                  <button class="pui-btn-primary pui-btn-primary--big is-block success" type="submit">Login
+                    &raquo;</button>
+                </div>
+                <p class="pui-form__description password-reset" style="margin-top: 16px;">Forgot your
+                  password?
+                  <a
+                    href="/cannot-reset-password">Reset it</a>.</p>
+              </form>
+            </section>
+            <script type="text/javascript" id="hs-script-loader" async defer
+              src="//js.hs-scripts.com/4105085.js"></script>
           </div>
-          <div class="landing-header__right">
-            <div class="pills">
-              <a class="pui-pill" href="/users/signup">Signup</a>
-              <span class="pui-pill selected">Login</span>
-            </div>
-          </header>
-          <form class="pui-form" method="post" action="/users/login">
-            <div class="pui-form__element">
-              <input class="pui-form__input pui-form__input--large" placeholder="Username (or Email)" type="email"
-                name="email"
-                required />
-            </div>
-            <div class="pui-form__element">
-              <input class="pui-form__input pui-form__input--large" placeholder="Password" type="password"
-                name="password"
-                required />
-            </div>
-            <div class="pui-form__element">
-              <button class="pui-btn-primary pui-btn-primary--big is-block success" type="submit">Login
-                &raquo;</button>
-            </div>
-            <p class="pui-form__description password-reset" style="margin-top: 16px;">Forgot your password?
-              <a
-                href="https://vendors.paddle.com/password/reset">Reset it</a>.</p>
-          </form>
-        </section>
-        <script type="text/javascript" id="hs-script-loader" async defer
-          src="//js.hs-scripts.com/4105085.js"></script>
-      </div>
-      <!-- SECTION END - Login Box -->
+          <!-- SECTION END - Login Box -->
 
-      <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"2cc7798054","applicationID":"213756564","transactionName":"NVEDMBMCWxBRVEYNCwwbIAcVCloNH0FXCgANRj4IDgRcDW9HUwMB","queueTime":0,"applicationTime":34,"atts":"GRYARlsYSB4=","errorBeacon":"bam.nr-data.net","agent":""}</script>
-    </body>
-  </html>
+
+          <%- include('partials/page-end.ejs') %>
+
+            <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"2cc7798054","applicationID":"213756564","transactionName":"NVEDMBMCWxBRVEYNCwwbIAcVCloNH0FXCgANRj4IDgRcDW9HUwMB","queueTime":0,"applicationTime":34,"atts":"GRYARlsYSB4=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+          </body>
+        </html>

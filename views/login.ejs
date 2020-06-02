@@ -1,27 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
-</head>
-<body>
-  <section>
-    <form action="/users/login" method="post">
-      <h2>Login</h2>
-      <div class="">
-        <label for="username">Username OR Email</label>
-        <input type="text" id="username" name="username" required>
+<html>
+
+  <head>
+
+    <title>Login to Blog Account</title>
+    <link href="https://static.paddle.com/assets/css/vendor/landing.css" rel="stylesheet">
+    <link href="https://static.paddle.com/assets/css/icons/icons.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+      <section class="container">
+        <header class="landing-header">
+          <div class="landing-header__left">
+            <img class="logo" src="/assets/blog-icon.jpg" />
+          </div>
+          <div class="landing-header__right">
+            <div class="pills">
+              <a class="pui-pill" href="/users/signup">Signup</a>
+              <span class="pui-pill selected">Login</span>
+            </div>
+          </header>
+
+          <form class="pui-form" method="post" action="/signup">
+            <!-- needs a route -->
+            <input type="hidden" name="_token" />
+
+            <div class="pui-form__element">
+              <input class="pui-form__input pui-form__input--large" placeholder="Email Address"
+                type="email"
+                name="email" value="" required />
+            </div>
+            <div class="pui-form__element">
+              <input class="pui-form__input pui-form__input--large" placeholder="Username"
+                type="text"
+                name="username" value="" />
+            </div>
+            <div class="pui-form__element">
+              <input class="pui-form__input pui-form__input--large pui-form__input--with-tooltip"
+                placeholder="Password" type="password" name="password" required />
+
+            </div>
+            <div class="pui-form__element">
+              <button type="submit" class="pui-btn-primary pui-btn-primary--big is-block">Login
+                &raquo;</button>
+            </div>
+          </form>
+        </section>
+        <script src="https://cdn.paddle.com/external/jquery-1.11.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+        <script>window.PaddleVars = window.PaddleVars || {}; PaddleVars.passwordMinLength = 8;</script>
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4105085.js"></script>
+        <script src="https://cdn.paddle.com/external/jquery-1.11.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+        <script>window.PaddleVars = window.PaddleVars || {};PaddleVars.passwordMinLength = 8;</script>
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4105085.js"></script>
       </div>
-      <div class="">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <div class="">
-        <button type="submit">Sign In</button>
-      </div>
-    </form>
-  </section>
-</body>
-</html>
+    </body>
+
+  </html>
