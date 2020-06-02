@@ -1,14 +1,13 @@
 
 <%- include('partials/page-start.ejs') %>
 
-  <h2>User <%= user && user.username %></h2>
-
+  <% comments.forEach(comment=> {%>
 
     <div>
-      <h1><%= title %></h1>
-        <h2><%= author %></h2>
-          <p><%= content %></p>
-          </div>
+      <h2><%= comment.dataValues.author %></h2>
+        <p><%= comment.dataValues.remark %></p>
+        </div>
+        <% })%>
 
           <p><a href="/">Home</a></p>
 

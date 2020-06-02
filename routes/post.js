@@ -27,6 +27,18 @@ router.get("/:id", function (req, res, next) {
   });
 });
 
+router.get("/:id/comments", function (req, res, next) {
+  db.Comments.findAll({ where: { post_id: req.params.id } }).then(
+    (comments) => {
+      console.log("****");
+      console.log(comments[0]["dataValues"]);
+      res.render("post-template.ejs", {
+        comments: comments,
+      });
+    }
+  );
+});
+
 // for new post
 // router.post("/dashboard", (req, res) => {
 //     const { title, content, author } = req.body;
