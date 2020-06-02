@@ -55,52 +55,45 @@ router.post("/login", (req, res) => {
     });
 });
 
-
-
 router.post("/createpost2", (req, res, next) => {
   const values = {
     title: req.body.title,
     author: req.body.author,
-    body_content: req.body.body_content
+    body_content: req.body.body_content,
   };
 
-  db.Posts.create(values)
-    .then(function (user) {
-      // res.redirect("/users/dashboard");
-      res.json(user);
-    });
+  db.Posts.create(values).then(function (user) {
+    res.redirect("/users/dashboard");
+    // res.json(user);
+  });
 });
 
 // updates blog post
 router.put("/createpost2/:id", (req, res, next) => {
-  db.Posts.findByPk(parseInt(req.params.id))
-    .then(function (post) {
-      post.title = req.body.title;
-      post.author = req.body.author;
-      post.body_content = req.body.body_content;
-      post.save()
-        .then((result) => {
-          console.log(result);
-          res.redirect("/users/dashboard");
-        })
+  db.Posts.findByPk(parseInt(req.params.id)).then(function (post) {
+    post.title = req.body.title;
+    post.author = req.body.author;
+    post.body_content = req.body.body_content;
+    post.save().then((result) => {
+      console.log(result);
+      res.redirect("/users/dashboard");
     });
+  });
 });
-
 
 //deletes post
 router.delete("/createpost2/:post_id", (req, res, next) => {
   const post_id = req.params.post_id;
 
   db.Posts.destroy({ where: { id: parseInt(post_id) } })
-    .then(rowsDeleted => {
+    .then((rowsDeleted) => {
       if (rowsDeleted === 1) {
-        console.log('Deleted successfully');
+        console.log("Deleted successfully");
       }
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
     });
 });
-
 
 module.exports = router;
