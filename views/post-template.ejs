@@ -1,14 +1,29 @@
 
 <%- include('partials/page-start.ejs') %>
 
-  <% comments.forEach(comment=> {%>
 
-    <div>
-      <h2><%= comment.dataValues.author %></h2>
-        <p><%= comment.dataValues.remark %></p>
+  <div class="container b4-container">
+    <div class="row">
+      <div class="col-2">
+      </div>
+      <div class="col-8">
+        <div class="justify-content-center align-content-center"></div>
+        <% comments.forEach(comment=> {%>
+
+          <div>
+            <p><b>Author</b></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<%= comment.dataValues.author %></p>
+              <p><b>Comment</b></p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;<%= comment.dataValues.remark %></p>
+                <hr>
+              </div>
+              <% })%>
+              </div>
+            </div>
+            <div class="col-2">
+            </div>
+          </div>
         </div>
-        <% })%>
 
-          <p><a href="/">Home</a></p>
 
-          <%- include('partials/page-end.ejs') %>
+        <%- include('partials/page-end.ejs') %>

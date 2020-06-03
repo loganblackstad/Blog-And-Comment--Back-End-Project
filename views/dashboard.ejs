@@ -1,23 +1,35 @@
 
 <%- include('partials/page-start.ejs') %>
 
-  <h1>Welcome to <%= title %></h1>
-    <h2>Welcome! <%= user && user.username %></h2>
-      <h2>Thanks for signing up on the <%= title %> web app.</h2>
-        <h2>Your email is <%= user && user.email %></h2>
 
-          <% Posts.forEach(post=> {%>
+  <div class="container b4-container">
+    <div class="row">
+      <div class="col-2">
+      </div>
+      <div class="col-8">
+        <div class="justify-content-center align-content-center"></div>
+        <h1>Welcome to <%= title %></h1>
+          <h3>username: <%= user && user.username %></h3>
+            <h3>email: <%= user && user.email %></h3>
 
-            <div>
-              <a href="/post/<%=post.id%>/comments"><h1><%= post.title %></h1></a>
-                <h2><%= post.author %></h2>
-                  <p><%= post.body_content %></p>
+              <% Posts.forEach(post=> {%>
+
+                <div>
+                  <a href="/post/<%=post.id%>/comments"><h1><%= post.title %></h1></a>
+                    <h2><%= post.author %></h2>
+                      <p><%= post.body_content %></p>
+                      </div>
+                      <% })%>
+                        <p><a href="/">Home</a></p>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                    </div>
                   </div>
-                  <% })%>
+                </div>
 
 
 
 
-                    <p><a href="/">Home</a></p>
 
-                    <%- include('partials/page-end.ejs') %>
+                <%- include('partials/page-end.ejs') %>
