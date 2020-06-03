@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "on-start-sequelize": "sequelize init&&sequelize db:create&&sequelize db:migrate&&sequelize db:seed:all",
     "update-sequelize": "sequelize db:drop&&sequelize db:create&&sequelize db:migrate&&sequelize db:seed:all",
+    "heroku-refresh": "heroku run bash&&sequelize db:migrate&&sequelize db:seed:all",
     "start": "node app.js"
   },
   "repository": {

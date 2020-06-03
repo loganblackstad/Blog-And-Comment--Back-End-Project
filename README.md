@@ -24,28 +24,49 @@ Getting started with Blog & Comment is super easy! Simply press the "Register" o
 
 You're going to need:
 
+Node.JS
+
+
 ## Database Schema Employed:
 
 <p align="center"><img src="./public/assets/database-schema.png" width=700 alt="Database Schema Employed"></p>
 
 ## List of Packages & Libraries Used:
 
+Node.JS
+Express
+Postgres
+EJS-templates
+Bcrypt
+Bootstrap
+HTML
+CSS
+
+
 ## What Features You Would Add Next?
 
-- Lorem Ipsum
-- Lorem Ipsum
+- Add threaded comments (for users to comments on coments in a comment tree)
+- OAuth (for users to sign-up or login using their existing Google, Facebook, GitHub, etc accounts)
+- Ability to create comments
 
 ## Challenges
 
-One of the harder parts of creating this web application was ...
+- Yes, always
+- Deploying Sequelize Models and Migrations to Heroku
+- Creating Functioning Routes 
+- EJS rendering
+- 
 
 ## Next Steps
 
-...
+- a future build would include front-end validation for handling unique email validation
+- front-end error handling when no user is logged in 
+- Refactor the CSS for better navigation and readibility of the site
+
 
 ## Questions? Need Help? Found a bug?
 
-If you've got questions about login, usage, special feature implementation in your fork, or just want to chat with the developer, please feel free to contact a Developer.
+If you have questions about login, usage, special feature implementation in your fork, or just want to chat with the developer, please feel free to contact a Developer.
 
 ## Contributors
 
