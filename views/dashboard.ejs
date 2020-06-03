@@ -15,8 +15,9 @@
               <% Posts.forEach(post=> {%>
 
                 <div>
+                  <hr>
                   <a href="/post/<%=post.id%>/comments"><h1><%= post.title %></h1></a>
-                    <h2><%= post.author %></h2>
+                    <p><b>Author</b>: <%= post.author %></p>
                       <p><%= post.body_content %></p>
                       </div>
                       <% })%>
