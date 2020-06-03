@@ -35,7 +35,7 @@ Node.JS
 
 Node.JS
 Express
-Postgres
+PostgreSQL
 EJS-templates
 Bcrypt
 Bootstrap
@@ -45,7 +45,7 @@ CSS
 
 ## What Features You Would Add Next?
 
-- Add threaded comments (for users to comments on coments in a comment tree)
+- Add threaded comments (for users to comments on comments in a comment tree)
 - OAuth (for users to sign-up or login using their existing Google, Facebook, GitHub, etc accounts)
 - Ability to create comments
 
@@ -55,13 +55,12 @@ CSS
 - Deploying Sequelize Models and Migrations to Heroku
 - Creating Functioning Routes 
 - EJS rendering
-- 
 
 ## Next Steps
 
 - a future build would include front-end validation for handling unique email validation
 - front-end error handling when no user is logged in 
-- Refactor the CSS for better navigation and readibility of the site
+- Refactor the CSS for better navigation and readability of the site
 
 
 ## Questions? Need Help? Found a bug?
