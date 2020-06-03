@@ -3,35 +3,37 @@
 
     <!-- SECTION START - Wizywid Editor -->
     <section>
-        <form action="/users/createpost2" method="post">
-            <h2>Create Post</h2>
-            <div class="">
-                <label for="filler">Filler</label>
-                <input type="text" id="filler" name="filler">
-            </div>
-            <div class="">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" value="<%= user %>">
-            </div>
-            <div class="">
-                <label for="title">Title</label>
-                <input type="text" id="title" name="title" required>
-            </div>
-            <div class="">
-                <label for="body_content">Content</label>
-                <textarea name="body_content" id="body_content" rows="10" cols="80">
-                    Create some post content here.
-                </textarea>
-                <script>
+        <div class="b4-container">
+            <form action="/users/createpost2" method="post">
+                <h2>Create Post</h2>
+                <div class="">
+                    <label for="filler">Filler</label>
+                    <input type="text" id="filler" name="filler">
+                </div>
+                <div class="">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" value="<%= user %>">
+                </div>
+                <div class="">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="">
+                    <label for="body_content">Content</label>
+                    <textarea name="body_content" id="body_content" rows="10" cols="80">
+                        Create some post content here.
+                    </textarea>
+                    <script>
                 // Replace the <textarea id="editor1"> with a CKEditor
                 // instance, using default configuration.
                     CKEDITOR.replace( 'body_content' );
                 </script>
-            </div>
-            <div class="center">
-                <button type="submit">Create Post</button>
-            </div>
-        </form>
+                </div>
+                <div class="center">
+                    <button type="submit">Create Post</button>
+                </div>
+            </form>
+        </div>
     </section>
     <!-- SECTION END - Wizywid Editor -->
 
